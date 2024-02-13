@@ -28,7 +28,7 @@ pop()
 
 push()
 scale(0.2)
-image(wingsImg, vocal+840, 6500)
+image(wingsImg, bass+840, 6500)
 pop()
 }
 
