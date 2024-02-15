@@ -4,6 +4,7 @@ let firstRun = true;
 let heartImg;
 let bodyImg;
 let wingsImg;
+let wings2Img;
 
 
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
@@ -11,6 +12,7 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
     heartImg = loadImage('heart.png')
     bodyImg = loadImage('body.png')
     wingsImg = loadImage('wings.png')
+    wings2Img = loadImage('wings 2 .png')
 
  firstRun = false
    
@@ -28,8 +30,24 @@ pop()
 
 push()
 scale(0.2)
-image(wingsImg, vocal+840, drum+6500)
+image(wings2Img, drum-700 , 6000)
 pop()
+
+push()
+scale(0.8)
+image(heartImg, -740,drum-450) // name of image, xpos, Ypos 
+pop()
+
+push()
+scale(0.2)
+image(wingsImg, drum+1200, 6000)
+pop()
+
+
+
+
+
+
 
 push()
 
@@ -44,7 +62,7 @@ beginShape();
 scale(1)
 fill (128,0,0)
 
-ellipse(width/3.4,drum+900, ballSize);
+ellipse(width/3.4,drum+600, ballSize-60);
 
 //curveVertex(500,250)
 //curveVertex(520,160)
@@ -61,6 +79,7 @@ ellipse(width/3.4,drum+900, ballSize);
 pop()
 
 push()
+var ballSize = map(bass, 0,100, 40,150);
 
 
 
@@ -71,7 +90,31 @@ beginShape();
 scale(1)
 fill (128,0,0)
 
-ellipse(width/3.4,drum+800,20);
+ellipse(width/3.4,drum+800,ballSize-60);
+
+
+
+pop()
+
+
+
+push()
+var ballSize = map(bass, 0,100, 40,150);
+
+
+
+stroke(0)
+fill (128,0,0);
+
+beginShape();
+scale(1)
+fill (128,0,0)
+
+ellipse(width/3.4,drum+1000,ballSize-70);
+
+
+
+
 }
 
 
